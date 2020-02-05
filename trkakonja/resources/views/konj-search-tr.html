@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+html,body{
+	 background: white;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100%;
+	}
+	
+	.login {
+	  display: inline-block;
+	}
+
+	
+	form {
+	  position: relative;
+	  
+	  margin: 2 auto;
+	  background: #daf0dd;
+	  padding: 40px 40px;
+	  border: 1px solid;
+	  border-top-color: rgba(255,255,255,.4);
+	  border-left-color: rgba(255,255,255,.4);
+	  border-bottom-color: rgba(60,60,60,.4);
+	  border-right-color: rgba(60,60,60,.4);
+	}
+	
+	form input, form button {
+	width: 100%;
+	  border: 1px solid;
+	  border-bottom-color: rgba(255,255,255,.5);
+	  border-right-color: rgba(60,60,60,.35);
+	  border-top-color: rgba(60,60,60,.35);
+	  border-left-color: rgba(80,80,80,.45);
+	  background-color: rgba(0,0,0,.2);
+	  background-repeat: no-repeat;
+	  padding: 10px 10px 10px 10px;
+	  letter-spacing: .075em;
+	  color: #fff;
+	  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+	  margin-bottom: 10px;
+	}
+	
+	form input:focus { background-color: rgba(0,0,0,.4); }
+
+	
+	::-webkit-input-placeholder { color: #ccc;  }
+	::-moz-placeholder { color: #ccc;  }
+	:-ms-input-placeholder { color: #ccc;  }
+	
+	form button[type=submit] {
+	  color: #ffffff;
+	  text-shadow: 0 1px 0 #133d3e;
+	  text-transform: uppercase;
+	  background: #0f3d15;
+	  border-top-color: #9fb5b5;
+	  border-left-color: #608586;
+	  border-bottom-color: #1b4849;
+	  border-right-color: #1e4d4e;
+	  cursor: pointer;
+	}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 25%;
+		  background-color: #f1f1f1;
+		  position: fixed;
+		  height: 100%;
+		}
+		
+		li a {
+		  display: block;
+		  color: #000;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+		
+		li a.active {
+		  background-color: #4CAF50;
+		}
+		
+		li a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+		tr:hover { 
+		   background: white; 
+		}
+		td a { 
+		   display: block; 
+		   border: 1px solid black;
+		   padding: 16px; 
+		}
+		.navigation {		   
+		    top: 0;
+		    width: 100%;
+		}
+		
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+
+.header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #054d0c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  font-size: 16px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #4ca346;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #033007;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: #b3f5ba;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg-center {
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+.fakeimg {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+
+}
+.div1 {
+  text-align: center;
+  color: black
+}
+
+.div1 a{
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  
+}
+
+/* Footer */
+
+.p{
+text-align: justify;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #2c9136;
+  color: white;
+}
+.footer-distributed{
+	background-color: #032e07;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #a7ccab;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #001202;
+	box-shadow: 0 1px 0 0 rgba(13, 107, 23, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #ffffff;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #a7ccab;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #a7ccab;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #a7ccab;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #001202;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+			.table {
+		  display: table;
+		}
+		table th,td {
+   text-align: center; 
+}
+		
+		.row {
+		  display: table-row;
+		}
+		
+		.cell {
+		  display: table-cell;
+		  
+		  padding: 10px;
+		}
+		
+		.row:hover {
+		  background-color: #ffffff;
+		}
+		
+		.cell:hover {
+		  background-color: #e5e5e5;
+		}
+				
+		td {border: 1px #06470d solid; padding: 5px; cursor: pointer;}
+				body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  margin: 0;
+		}
+		
+		.konj_img{
+      width: 200px;
+    }
+
+   </style>
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, contact, form, icons" />
+    <link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+	
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <meta charset="ISO-8859-1">
+	<title>Pretraga konja</title>
+	<script>
+function searchKonj(text) {
+    $.ajax({
+        type: "GET",
+        url: "/pretragatr",
+        data: {
+            text: text
+        },
+        dataType: 'json',
+        success: function(data) {
+            var tableData = "";
+            if (data != null) {
+                for (var i = 0; i < data.length; i++) {
+                     tableData += "<tr>";
+                    tableData += "<tr id='" + data[i].id + " class='clickable-row'>";
+                    tableData += "<td>" + data[i].konjID + "</td>";
+                    tableData += "<td>" + data[i].ime + "</td>";
+                    tableData += "<td>" + data[i].boja + "</td>";
+                    tableData += "<td>" + data[i].rasa + "</td>";
+					tableData += "<td>" + data[i].sampion + "</td>";
+					tableData += "<td><img src=" + data[i].slika + " class='konj_img'></td>";
+                    tableData += "<td>" + data[i].time + "</td>";
+                    
+                    tableData += "<tr>";
+                   
+                }
+            }
+            $("#table-konji tbody").html(tableData);
+        },
+        error: function(xhr, status, error) {
+            showErrorMessage(xhr.responseText);
+        }
+    });
+}
+	</script>
+	<script>
+	function getKonj(id) {
+	    window.location = "/konj/" + id;
+	}
+	</script>
+</head>
+<body>
+		<div class="header">
+		  <h1>Zdravo {{logged.imePrezime}}!</h1>
+		<h3> Pregled tvojih konja </h3>
+		</div>
+		
+		<div class="navbar">
+		 <a href="/addkonj">Dodaj tvog konja za trku</a>
+         <a href="/pretragatr" class="active">Pregled tvojih konja</a>
+         <a href="/pretragatrka">Pretraga trka</a> 
+         <a href="/addishod">Prijavi se za trku</a> 
+         <a href="/ishodtr">Ishod trke</a>               
+         <a href="/tlogout" class="right">Izloguj se sa naloga</a>
+		</div> 
+		 
+      <div class="row">
+
+           
+           <table id="table-konji" class="table">
+            <thead>
+             <th>ID</th>
+              <th>Ime</th>
+              <th>Boja</th>
+              <th>Rasa</th>
+              <th>Sampion</th>
+              <th>Slika</th>
+              <th>Trkac</th>          
+ 			 </thead>
+ 			  
+             <tbody>
+              {% for k in konji %}
+              {% if k.trkacID = logged.trkacID %}
+               <tr id="{{k.konjID}}" class="clickable-row">
+               <td>{{k.konjID}}</td>
+               <td>{{k.ime}}</td>
+               <td>{{k.boja}}</td>
+               <td>{{k.rasa}}</td>
+			   <td>{{k.sampion}}</td>
+			   <td><img src={{k.slika}} alt="steps" class='konj_img'></td>
+               <td>{{k.time}}</td>  
+               <td><button id="{{k.konjID}}" class="btn" onclick="getKonj(this.id)"><i class="fa fa-edit"></i> Izmeni podatke o konju</button></td>      
+               </tr>
+               {% endif %}
+               {% endfor %}
+              
+             </tbody>
+             </table>  
+         </div>
+<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Pocetna</a>
+					·
+					<a href="/pretragahome">Pregled konja</a>
+					·
+					<a href="/pretragatrkahome">Pregled trka</a>
+					·
+					<a href="/login">Logovanje</a>
+					·
+					<a href="/registration">Registracija</a>
+				</p>
+
+				<p class="footer-company-name">Trka konja &copy; 2020</p>
+
+			</div>
+
+		<div class="footer-right">
+
+				<p>Kontaktirajte nas ukoliko imate dodatnih pitanja</p>
+
+				<form action="/trkacForma" method="post">
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button class="btn btn-success" type="submit">Posalji</button>
+				</form>
+			</div>
+</footer>
+</body>
+</html>

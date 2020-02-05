@@ -1,0 +1,448 @@
+<html>
+<head>
+
+	<style>
+	body {
+		  margin: 0;
+		}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 25%;
+		  background-color: #f1f1f1;
+		  position: fixed;
+		  height: 100%;
+		}
+		
+		li a {
+		  display: block;
+		  color: #000;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+		
+		li a.active {
+		  background-color: #4CAF50;
+		}
+		
+		li a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+		tr:hover { 
+		   background: white; 
+		}
+		td a { 
+		   display: block; 
+		   border: 1px solid black;
+		   padding: 16px; 
+		}
+		.navigation {		   
+		    top: 0;
+		    width: 100%;
+		}
+		
+		.table {
+		  display: table;
+		}
+		
+		.row {
+		  display: table-row;
+		}
+		
+		.cell {
+		  display: table-cell;
+		  padding: 10px;
+		}
+		
+		.row:hover {
+		  background-color: #cccccc;
+		}
+		
+		.cell:hover {
+		  background-color: #e5e5e5;
+		}
+				
+		td {border: 1px #DDD solid; padding: 5px; cursor: pointer;}
+						body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  margin: 0;
+		}
+		
+		
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #6C7FCD;
+  color: white;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}		
+		
+		.header h1 {
+		  font-size: 40px;
+		}
+		/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+		.navbar {
+		  overflow: hidden;
+		  background-color: #91A3EB;
+		  position: sticky;
+		  position: -webkit-sticky;
+		  top: 0;
+		}
+				
+		.navbar a {
+		  float: left;
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 20px;
+		  text-decoration: none;
+		}
+		
+		.navbar a.right {
+		  float: right;
+		}
+		
+		.navbar a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+		
+		.navbar a.active {
+		  background-color: #666;
+		  color: white;
+		}
+
+   </style>
+   
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, contact, form, icons" />
+    <link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<title>Prikaz organizatora</title>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+ 
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <meta charset="ISO-8859-1">
+	<script>
+	function searchUser(text) {
+	    $.ajax({
+	        type: "GET",
+	        url: "/organizatori",
+	        data: {
+	            text: text
+	        },
+	        dataType: 'json',
+	        success: function(data) {
+	            var tableData = "";
+	            if (data != null) {
+	                for (var i = 0; i < data.length; i++) {
+	                    tableData += "<tr>";
+	                    tableData += "<tr id='" + data[i].id + " class='clickable-row'>";
+	                    tableData += "<td>" + data[i].organizatorID + "</td>";
+	                    tableData += "<td>" + data[i].imePrezime + "</td>";
+	                    tableData += "<td>" + data[i].username + "</td>";
+	                    tableData += "<td>" + data[i].rola + "</td>";
+	                    tableData += "<tr>";
+	                }
+	            }
+	            $("#table-useri tbody").html(tableData);
+	        },
+	        error: function(xhr, status, error) {
+	            showErrorMessage(xhr.responseText);
+	        }
+	    });
+	}
+	
+	</script>
+
+</head>
+<body>
+		<div class="header">
+		  <h1>Zdravo {{logged.imePrezime}}!</h1>
+		</div>
+		
+		<div class="navbar">
+		  <a href="/konji">Pregled konja</a>
+          <a href="/pretraga">Pretraga konja</a>
+          <a href="/trke">Pregled trka</a>
+          <a href="/trka-add">Dodavanje trke</a>
+          <a href="/ishod">Ishod trke</a>                       
+          <a href="/logout" class="right">Izloguj se sa naloga</a>
+		</div>
+		<div> <p>U narednoj tabeli se nalazi lista organizatora koji imaju nalog.</p></div>
+		<div class="row">
+           <input type="text" name="search" placeholder="Pretraga ..." onkeyup="searchUser(this.value);" autofocus/>
+           <br>
+           <br>
+           <table id="table-useri" class="table">
+            <thead>
+              <th>ID</th>
+              <th>Ime i prezime</th>
+              <th>Username</th>
+              <th>Rola</th>              
+ 			 </thead>
+ 			  
+             <tbody>
+              {% for u in organizatori %}
+               <tr id="{{u.organizatorID}}">
+               <td>{{u.organizatorID}}</td>
+               <td>{{u.imePrezime}}</td>
+               <td>{{u.username}}</td>
+               <td>{{u.rola}}</td>                            
+               </tr>
+               {% endfor %}
+              
+             </tbody>
+             </table>  
+         </div>
+<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Pocetna</a>
+					·
+					<a href="/pretragahome">Pregled konja</a>
+					·
+					<a href="/pretragatrkehome">Pregled trka</a>
+					·
+					<a href="/login">Logovanje</a>
+					·
+					<a href="/registration">Registracija</a>
+				</p>
+
+				<p class="footer-company-name">Trka konja &copy; 2020</p>
+
+			</div>
+
+		<div class="footer-right">
+
+				<p>Kontaktirajte nas ukoliko imate dodatnih pitanja</p>
+
+				<form action="/userForma" method="post">
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Posalji</button>
+				</form>
+			</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<title>Pocetna strana</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #054d0c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #4ca346;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #033007;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+  
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: #b3f5ba;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg-center {
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+.fakeimg {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+
+}
+.div1 {
+  text-align: center;
+  color: black
+}
+
+.div1 a{
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  
+}
+
+/* Footer */
+
+.p{
+text-align: justify;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #2c9136;
+  color: white;
+}
+.footer-distributed{
+	background-color: #032e07;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #a7ccab;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+.icons{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #001202;
+	box-shadow: 0 1px 0 0 rgba(13, 107, 23, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #ffffff;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #a7ccab;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #a7ccab;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #a7ccab;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #001202;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+</style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, contact, form, icons" />
+    <link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+	<title>Pocetna strana</title>
+
+
+</head>
+<body>
+
+<div class="header">
+
+  <h1>Trka konja</h1>
+  <div class="row">
+  <div class="col-3" style="height:200px; padding-right: 30px; padding-left: 10px"><img src="trka.jpg" alt="steps" height="200" width="300"></div>
+  <div class="col-3" style="height:200px; padding-right: 30px"><img src="trka2.jpg" alt="steps" height="200" width="300"></div>
+  <div class="col-3" style="height:200px; padding-right: 30px"><img src="dvokolica.jpg" alt="steps" height="200" width="300"></div>
+  <div class="col-3" style="height:200px;"><img src="prepone.jpg" alt="steps" height="200" width="300"></div>
+  </div><br>
+  <h3><b>Organizujte trku ili ucestvujte u trci</b></h3>
+</div>
+
+<div class="navbar">
+  <a href="/" class="active">Pocetna</a>
+  <a href="/pretragahome"></i>Pregled konja</a>
+  <a href="/pretragatrkahome">Pregled trka</a>
+  <a href="/ishodi">Ishod trke</a>
+  <a href="/login" class="right"><i class="fa fa-user"></i> Login organizatora</a>
+  <a href="/tlogin" class="right"><i class="fa fa-user"></i> Login trkaca</a>
+ 
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2 style="text-align: center">O trkama konja</h2>
+	
+    <div style="padding-left: 10px;"><p>Trke konja odrzavaju se od davnina. Postoje tri vrste trka:</br></br></div>
+    <div class="row">
+    <div class="col-4" style="padding-right: 50px; padding-left: 20px"><b>1. Kasacke trke</b></br></br>Trke kasaca se dele u dve kategorije:</br>
+    </br><div style="padding-left: 20px;">1. Kasacke trke u sulkama : vozac sedi na sulkama koje vuce konj.</br></br>
+    2. Kasacke trke monte : konjanik (dzokej) sedi na ledjima svog konja.</br></br></div>
+    U kasackim trkama konj treba da kasa sto je brze moguce i stigne na cilj bez</br> prelaska u galop. Ako konj predje u galop, konj i trkac-dzokej se diskvalifikuju. 
+   </br>Kasacke trke se razlikuju po duzini i po uzrastu konja.</br></br></div>
+   <div class="col-4" style="height:300px; padding-right: 20px; text-align: right"><img src="dvokolica.jpg" alt="steps" height="250" width="350"></div>
+   <div class="col-4" style="height:300px; text-align: right"><img src="trka.jpg" alt="steps" height="250" width="350"></div>  
+   </div></br>
+   
+    <div class="row">
+    <div class="col-4" style="padding-right: 84px; padding-left: 20px">
+    <b>2. Galopske trke</b></br></br>Trke galopera se dele u dve kategorije:</br></br>
+    <div style="padding-left: 20px; padding-bottom: 10px">1. Trke na ravnoj stazi : duzina staze iznosi 800 do 4 000 metara.</br></br>
+    2. Trka preko prepreka : duzina staze je izmedju 2 800 i 6 500 metara.</br> </div>
+    <div style="padding-left: 40px;">Trkacke staze mogu biti:</br><div style="padding-left: 20px;"> - Sa preprekama u obliku zivica
+     (sve prepreke su identicne)</br> - Stiplcez (na stazi su bar cetiri razlicita tipa prepreka) ili </br> 
+     - Kroskantri (prirodne prepreke, najduze staze).</br></br></div></div></div>
+     <div class="col-4" style="height:300px; padding-right: 20px; text-align: right"><img src="trka2.jpg" alt="steps" height="250" width="350"></div>
+   <div class="col-4" style="height:300px; text-align: right"><img src="prepone.jpg" alt="steps" height="250" width="350"></div>
+     </div>
+     
+     <div class="row>
+     <div class="col" style="padding-left: 20px">
+     <b>3. Grupne trke</b></br></br>
+     U grupnim trkama ucestvuju najbolja medjunarodna zdrebad i pastuvi.
+      Kastriranim konjima po pravilu nije dozvoljeno da se takmice. </br>
+     Ove trke se dele u grupe, pri cemu je Grupa I najbolja kategorija.</p></div></br></br></br>
+  
+	
+  <div class="main">
+	<h3>Uputstvo:</h3></br>
+	<p>ORGANIZACIJA TRKE</p>
+    <p>Ukoliko zelite da organizujete trku konja potrebno je da se registrujete na stranici, ukoliko nemate nalog, klikom na dugme Logovanje organizatora
+    u gornjem desnom uglu stranice. Nakon toga je dostupno logovanje za postojece i registracija za nove klijente. 
+	Nakon prijave/logIn-a, omoguceno je da gledate konje i trkace koji postoje u bazi kao i da dodate svoju trku ili izmenite postojecu i unesete rezultate trke.
+	<br>
+	<br>
+	 <p>PRIJAVA ZA TRKU</p>
+    <p>Ukliko zelite da se prijavite za ucesce u trci konja potrebno je da se registrujete na stranici, ukoliko nemate nalog,
+    klikom na dugme Logovanje trkaca u gornjem desnom uglu stranice. 
+	Nakon toga je dostupno logovanje za postojece i registracija za nove trkace. 
+	Nakon uspostavljanja naloga, ulaskom na dodavanje Vaseg konja dodajete konja sa kojim cete se takmiciti.
+	 Ukoliko je potrebno azurirati ili obrisati konja prvo se ulazi na pregled konja, a nakon toga klikom na zeljeni entitet,
+	  dobija se prikaz samo tog konja, sa mogucnoscu izmene prethodno unetih parametara. </p> 
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</div>
+
+<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Pocetna</a>
+					·
+					<a href="/pretragahome">Pregled konja</a>
+					·
+					<a href="/pretragatrkahome">Pregled trka</a>
+					·
+					<a href="/login">Logovanje</a>
+					·
+					<a href="/registration">Registracija</a>
+				</p>
+
+				<p class="footer-company-name">Trka konja &copy; 2020</p>
+	
+				
+
+			</div>
+
+		<div class="footer-right">
+
+				<p>Kontaktirajte nas ukoliko imate dodatnih pitanja</p>
+
+				<form action="/" method="post">
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button class="btn btn-success" type="submit">Posalji</button>
+				</form>
+			</div>
+</footer>
+
+
+</body>
+</html>

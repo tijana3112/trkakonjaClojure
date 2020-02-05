@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+		  margin: 0;
+		}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 25%;
+		  background-color: #f1f1f1;
+		  position: fixed;
+		  height: 100%;
+		}
+		
+		li a {
+		  display: block;
+		  color: #000;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+		
+		li a.active {
+		  background-color: #4CAF50;
+		}
+		
+		li a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+
+		.table{
+		    display:table;
+		    height:50px;
+		    margin-left: 30px;
+		    margin-top: 30px;
+		    table-layout: fixed;
+ 				  position: relative;
+	  max-width: 80%;
+	  margin: 2 auto;
+	  background: #5cb85c;
+	  padding: 40px 40px;
+		}
+		.table-cell{
+		    vertical-align:sub;
+		/*     padding: 5px 0; */
+		    background: #F5F5DC;
+		    text-align: center;
+		    margin: 0 0 0px 0;
+		    font-size: 18px;
+		    color: black;
+		}
+		.table-cell-1{
+		    vertical-align:middle;
+		/*     padding: 5px 0; */
+		    background: #F5F5DC;
+		    text-align: center;
+		    margin: 0 0 0px 0;
+		    font-size: 18px;
+		    color: black;
+		    border-style: hidden;
+		    visibility: hidden;
+		}
+				.table-cell-2{
+		    vertical-align:middle;
+		/*     padding: 5px 0; */
+		    background: #F5F5DC;
+		    text-align: center;
+		    margin: 0 0 0px 0;
+		    font-size: 18px;
+		    color: black;
+		    
+    		background-color:#5F9EA0
+		}
+	    .content-pic {
+		    height:90%; /* = 100% - 2*5% padding */
+		    width:90%; /* = 100% - 2*5% padding */
+		
+		}
+	    .content-pic .rs{    
+		    width:auto;
+		    height:auto;
+		    max-height:60%;
+		    max-width:70%;
+		}
+				
+
+
+btn.btn:hover {
+/*     text-shadow: 0 3px 2px rgba(0,0,0,0.4); */
+    color:black;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1)
+}
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+
+.header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #054d0c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  font-size: 16px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #4ca346;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #033007;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: #b3f5ba;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg-center {
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+.fakeimg {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+
+}
+.div1 {
+  text-align: center;
+  color: black
+}
+
+.div1 a{
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  
+}
+
+/* Footer */
+
+.p{
+text-align: justify;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #2c9136;
+  color: white;
+}
+.footer-distributed{
+	background-color: #032e07;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #a7ccab;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #001202;
+	box-shadow: 0 1px 0 0 rgba(13, 107, 23, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #ffffff;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #a7ccab;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #a7ccab;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #a7ccab;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #001202;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+
+			.table {
+		  display: table;
+		  padding-left: 30px;
+		}
+		
+		.rowt {
+		  display: table-row;
+		}
+		
+		.cell {
+		  display: table-cell;
+		  
+		  padding: 10px;
+		}
+		
+		.rowt:hover {
+		  background-color: #ffffff;
+		}
+		
+		.cell:hover {
+		  background-color: #e5e5e5;
+		}
+				
+		td {border: 1px #06470d solid; padding: 5px; cursor: pointer;}
+				body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  margin: 0;
+		}
+}	
+		
+</style>
+
+   
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, contact, form, icons" />
+    <link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<title>Ishod trke</title>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+ 
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <meta charset="ISO-8859-1">
+<script>
+  function getIshod(id2) {
+  var id = id2;
+    $.ajax({
+        type: "GET",
+        url: "/getishod",
+        data: {
+            trkaid: id
+        },
+        dataType: 'json',
+        success: function(data) {
+            var tableData = "";
+            if (data != null) {
+                for (var i = 0; i < data.length; i++) {
+                if(data[i].trkaID == id){
+                    tableData += "<tr id='" + data[i].konjID + "' class='clickable-row'>";
+                    tableData += "<td>" + data[i].kime + "</td>";
+                    tableData += "<td>" + data[i].time + "</td>";
+                    if(data[i].mesto == null){
+                    tableData += "<td>0</td>";
+                    }else{
+                    tableData += "<td>" + data[i].mesto + "</td>";  
+                    }              
+                    tableData += "</tr>";
+                  } 
+                }
+            }
+            $("#table-ishod tbody").html(tableData);
+        },
+        error: function(xhr, status, error) {
+            showErrorMessage(xhr.responseText);
+        }
+    });
+  }
+</script>
+</head>
+<body>
+		<div class="header">
+		 
+		<h3> Pregled ishoda trke </h3>
+		</div>
+		
+			<div class="navbar">
+         <a href="/pretraga">Pretraga konja</a>
+          <a href="/pretragatrkaor">Pretraga trka</a>
+          <a href="/trka-add">Dodaj trku</a>
+          <a href="/ishodor">Ishod trke</a>   
+          <a href="/trkaci">Pregled trkaca</a>                    
+          <a href="/logout" class="right">Izloguj se sa naloga</a>
+ 		  </div>
+ 		  <div class=row style="margin-left: 40px; width:80%">
+ 		  <div class="col-3" style="padding-right: 20px; padding-left: 30px; padding-top: 5px">
+ 		  <p>Izaberite trku za koju zelite da prikazete rezultate:  </p>
+ 		  </div>
+ 		  <div class="col-4" style="margin-right: 20px; padding-top: 5px">
+          <select name="trka" id="trka">
+          	{% for t in trke %}
+          	<option value="{{t.trkaID}}">{{t.naziv}} | {{t.tip}} | {{t.grad}}</option>
+          	{% endfor %}
+          </select> 
+          </div>
+          <div class="col-3">
+          <button class="btn btn-success" onclick="getIshod($('#trka').val())">Prikazi</button>
+          </div>                  
+		</div>
+		<div class="row" style="margin-left: 70px; width: 70%; margin-top: 20px">
+		<p>Ukoliko se ne prikazuju podaci klikom na dugme Prikazi, nije bilo prijavljenih konja za trku, ukoliko je mesto 0 organizator jos uvek nije uneo rezultate.</p>
+		</div>
+		<div class="row" style="margin-left: 40px; width:90%">
+		<table id="table-ishod" class="table">
+		<thead>
+             <th>Konj</th>
+             <th>Trkac</th>
+              <th>Mesto</th>          
+ 			 </thead>
+ 			 <tbody>
+ 			
+ 			 </tbody>
+ 			 </table>
+		</div>
+<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Pocetna</a>
+					·
+					<a href="/pretragahome">Pregled konja</a>
+					·
+					<a href="/pretragatrkahome">Pregled trka</a>
+					·
+					<a href="/login">Logovanje</a>
+					·
+					<a href="/registration">Registracija</a>
+				</p>
+
+				<p class="footer-company-name">Trka konja &copy; 2020</p>
+
+			</div>
+
+		<div class="footer-right">
+
+				<p>Kontaktirajte nas ukoliko imate dodatnih pitanja</p>
+
+				<form action="/userForma" method="post">
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button class="btn btn-success" type="submit">Posalji</button>
+				</form>
+			</div>
+</footer>
+</body>
+</html>
